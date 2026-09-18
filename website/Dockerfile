@@ -2,7 +2,7 @@
 # keeps the binary's arch aligned with the builder stage on cross-arch builds.
 FROM --platform=${BUILDPLATFORM} ghcr.io/pnpm/pnpm:11.20.0@sha256:d77573aba1649491010d3d252214be47197c0706417793cf393ac47cc324f315 AS pnpm
 
-FROM --platform=${BUILDPLATFORM} docker.io/library/node:26.5.1-trixie@sha256:a9875b5ccb02aa527cf7f2297b16ae425a0ff3da2f7d87fce3df41f04ffa0524 AS docs-builder
+FROM --platform=${BUILDPLATFORM} docker.io/library/node:26.9.0-trixie@sha256:e26b4e7d163a29e0d05806e167db8cc0c76f02f633006c1f5c0aeea5a8415147 AS docs-builder
 
 ENV NODE_ENV=production
 
